@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RCL Official VALORANT Leaderboard</title>
+  <link rel="stylesheet" href="leaderboardstyle.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="nav-left">RCL Official</div>
+  <div class="nav-links">
+    <button id="logout-btn" style="display:none; margin-left:5px; padding:4px 8px; font-size:14px; border-radius:6px; border:none; cursor:pointer; background:#ff5152; color:#fff;">
+      Log Out
+    </button>
+
+    <a href="home.html">Home</a>
+    <a href="leaderboard.html">Leaderboard</a>
+    <a href="">About</a>
+    <a href="login.html" id="login-link">Log In</a>
+    <a href="#">space!</a>
+  </div>
+</nav>
+    <div class="title-wrapper">
+        <div class="title">RCL VALORANT LEADERBOARD</div>
+    </div>
+
+  <!-- Header -->
+  <div class="header">
+    <div>Rank</div>
+    <div class="header-cols">
+      <div>Person</div>
+      <div>Username</div>
+      <div>Level</div>
+      <div>Main</div>
+      <div>Act Rank</div>
+      <div>Premier</div>
+    </div>
+  </div>
+
+  <!-- Rows -->
+  <div id="row-container">
+
+    <div class="row" draggable="true" data-id="player1">
+      <div class="rank">1</div>
+      <button class="info-btn" style="--glow-color: rgba(128,48,181, 0.6);">
+        <div>Austin Kendrick Avelino</div>
+        <div>azustin#011</div>
+        <div>25</div>
+        <div>Reyna</div>
+        <div>Gold 1</div>
+        <div>No</div>
+      </button>
+    </div>
+
+    <div class="row" draggable="true" data-id="player2">
+      <div class="rank">2</div>
+      <button class="info-btn" style="--glow-color: rgba(194, 36, 225, 0.6);">
+        <div>Ryan Jacob Caldez</div>
+        <div>Atelier#BOHOL</div>
+        <div>31</div>
+        <div>Vyse</div>
+        <div>Bronze 2</div>
+        <div>No</div>
+      </button>
+    </div>
+
+    <div class="row" draggable="true" data-id="player3">
+      <div class="rank">3</div>
+      <button class="info-btn" style="--glow-color: rgba(222, 222, 222, 0.6);">
+        <div>Nathan Aranes</div>
+        <div>RCL nath#2752</div>
+        <div>48</div>
+        <div>Sentinels</div>
+        <div>Iron 3</div>
+        <div>VL Initiators</div>
+      </button>
+    </div>
+
+    <div class="row" draggable="true" data-id="player4">
+      <div class="rank">4</div>
+      <button class="info-btn" style="--glow-color: rgba(22,77,160, 0.6);">
+        <div>James Matthew Calicdan</div>
+        <div>RCL peonx#vlrt</div>
+        <div>58</div>
+        <div>Yoru</div>
+        <div>Bronze 1</div>
+        <div>VL Initiators</div>
+      </button>
+    </div>
+
+    <div class="row" draggable="true" data-id="player5">
+      <div class="rank">5</div>
+      <button class="info-btn" style="--glow-color: rgba(72,214,218, 0.6);">
+        <div>John Gabriel Banate</div>
+        <div>faminedevil1107#9269</div>
+        <div>24</div>
+        <div>Neon</div>
+        <div>Iron 2</div>
+        <div>No</div>
+      </button>
+    </div>
+
+    <div class="row" draggable="true" data-id="player6">
+      <div class="rank">6</div>
+      <button class="info-btn" style="--glow-color: rgba(211,119,252, 0.6);">
+        <div>Jilliane Eve Rivero</div>
+        <div>RCL Killa Queen#Kira</div>
+        <div>290</div>
+        <div>Clove</div>
+        <div>Unranked</div>
+        <div>No</div>
+      </button>
+    </div>
+
+    <div class="row" draggable="true" data-id="player7">
+      <div class="rank">7</div>
+      <button class="info-btn" style="--glow-color: rgba(255,129,63, 0.6);">
+        <div>Kyle Matanguihan</div>
+        <div>RCL kai#sigma</div>
+        <div>23</div>
+        <div>Raze</div>
+        <div>Unranked</div>
+        <div>No</div>
+      </button>
+    </div>
+
+    <div class="row" draggable="true" data-id="player8">
+      <div class="rank">8</div>
+      <button class="info-btn" style="--glow-color: rgba(16, 16, 86, 0.6);">
+        <div>Brix Yohann Villafria</div>
+        <div>Pursuer#4552</div>
+        <div>8</div>
+        <div>Omen</div>
+        <div>Unranked</div>
+        <div>No</div>
+      </button>
+    </div>
+
+    <div class="row" draggable="true" data-id="player9">
+      <div class="rank">9</div>
+      <button class="info-btn" style="--glow-color: rgba(152, 223, 239, 0.6);">
+        <div>Prince Bautista</div>
+        <div>Free2Playmo1#2905</div>
+        <div>23</div>
+        <div>Jett</div>
+        <div>Unranked</div>
+        <div>No</div>
+      </button>
+    </div>
+
+    <div class="row" draggable="true" data-id="player10">
+      <div class="rank">10</div>
+      <button class="info-btn" style="--glow-color: rgba(172, 88, 228, 0.6);">
+        <div>Jaden Watson</div>
+        <div>TinySkinnyBones#001</div>
+        <div>25</div>
+        <div>Iso</div>
+        <div>Gold 1</div>
+        <div>No</div>
+      </button>
+    </div>
+
+    <div class="row" draggable="true" data-id="player11">
+      <div class="rank">11</div>
+      <button class="info-btn" style="--glow-color: rgba(35, 232, 71, 0.6);">
+        <div>Agnes Catherine Maurillo</div>
+        <div>bingoboo#booty</div>
+        <div>35</div>
+        <div>Skye</div>
+        <div>Iron 3</div>
+        <div>No</div>
+      </button>
+    </div>
+  </div>
+  <script type="module" src="leaderboardscript.js"></script>
+</body>
+</html>
+<script>
+  // navbar.js
+document.addEventListener("DOMContentLoaded", () => {
+  try {
+    const loginLink = document.getElementById("login-link");
+    if (!loginLink) return;
+
+    const stored = localStorage.getItem("userData");
+    if (!stored) {
+      // not logged: ensure default text and href
+      loginLink.textContent = "Log In";
+      loginLink.href = "login.html";
+      return;
+    }
+
+    const user = JSON.parse(stored);
+    const clean = (user && user.username) ? user.username.split("#")[0] : null;
+    if (clean) {
+      loginLink.textContent = clean;
+      loginLink.href = "#";
+    } else {
+      loginLink.textContent = "Log In";
+      loginLink.href = "login.html";
+    }
+  } catch (err) {
+    console.error("navbar update error:", err);
+  }
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const loginLink = document.getElementById("login-link");
+  const logoutBtn = document.getElementById("logout-btn");
+
+  // Check logged in user
+  const loggedUser = localStorage.getItem("loggedInUser");
+
+  if (loggedUser) {
+    // Show username in navbar
+    const cleanName = loggedUser.split("#")[0];
+    loginLink.textContent = cleanName;
+    loginLink.href = "#";
+    logoutBtn.color = "#ccc"
+
+    // Show logout button
+    logoutBtn.style.display = "inline-block";
+
+    // Logout handler
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("loggedInUser");
+      // reload page to update navbar
+      window.location.reload();
+    });
+
+  } else {
+    // Not logged in, show default
+    loginLink.textContent = "Log In";
+    loginLink.href = "login.html";
+    logoutBtn.style.display = "none";
+    
+  }
+});
+</script>

@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'DiN Next W1G';
+    src: url(dinnextw1g_bold.otf);
+}
+@font-face {
+  font-family: 'Tungsten';
+  src: url(Tungsten-Bold.ttf);
+}
+html {
+  scroll-behavior: smooth;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #ff5152;
+  display: flex;
+  justify-content: space-between; /* pushes left + right sections apart */
+  align-items: center;            /* vertical centering */
+  padding: 0 30px;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.nav-left {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+  
+.nav-links {
+  display: flex;
+  align-items: center; /* makes links sit in middle vertically */
+  gap: 10px;           /* spacing between links */
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 8px 12px;   /* gives clickable area */
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+  
+}
+
+.nav-links a:hover {
+  color: #fff;
+  text-shadow: 0 0 6px #fff;
+}
+.nav-links a:nth-last-child(2){
+  background-color: #08111a;
+  border-radius: 25px;
+}
+.nav-links a:last-child{
+  color: transparent;
+}
+.nav-links a:last-child:hover{
+  color: transparent;
+  text-shadow: 0 0 6px #ffffff00;
+}
+    body {
+      background-color: #0c1824;
+      color: #fff;
+      font-family: 'DiN Next W1G';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 10rem;
+      margin: 0;
+      color: #ff4c4c;
+      font-family: 'Tungsten';
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin: 10px 0 20px;
+    }
+
+.error a {
+  color: #fff;
+  background: #ff4c4c;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'DiN Next W1G';
+  font-size: 1rem;
+  text-decoration: none;
+  outline: none;
+  transition: background 0.3s;
+  display: inline-block;  /* makes it behave more like a button */
+}
+
+.error a:hover,
+.error a:focus,
+.error a:active,
+.error a:visited {
+  text-decoration: none;  /* removes underline on all states */
+  outline: none;          /* removes focus outline */
+  color: #fff;            /* keeps text color consistent */
+}
+
+.error a:hover {
+  background: #e43a3a;
+}

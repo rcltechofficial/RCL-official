@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RCL Official</title>
+  <link rel="stylesheet" href="homestyle.css">
+</head>
+<body>
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-left">RCL Official</div>
+      <div class="nav-links">
+        <button id="logout-btn" style="display:none; margin-left:5px; padding:4px 8px; font-size:14px; border-radius:6px; border:none; cursor:pointer; background:#ff5152; color:#fff;">
+      Log Out
+    </button>
+
+        <a href="home.html">Home</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="#">About</a>
+        <a href="login.html" id="login-link">Log In</a>
+        <a href="#">Space!</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="content reveal">
+
+    <!-- HERO -->
+    <section class="hero reveal">
+      <h1>WELCOME TO RCL OFFICIAL</h1>
+      <p>This is the official leaderboard hub. Stay updated, track scores, and compete with the best.</p>
+    </section>
+
+    <!-- UPDATES -->
+    <section class="info">
+      <h2>LATEST UPDATES</h2>
+      <p>Use this section to post announcements, updates, or highlights.</p>
+    </section>
+
+    <!-- GRID CARDS -->
+    <section class="grid">
+      <div class="card reveal-stagger">
+        <h3>Leaderboard</h3>
+        <p>Check out the top players and see where you stand.</p>
+      </div>
+      <div class="card reveal-stagger">
+        <h3>Community</h3>
+        <p>Join discussions, share strategies, and meet fellow players.</p>
+      </div>
+      <div class="card reveal-stagger">
+        <h3>Events</h3>
+        <p>Stay tuned for upcoming tournaments and competitions.</p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about">
+      <h2>ABOUT RCL</h2>
+      <p>
+        RCL Official is a platform dedicated to competitive gaming. 
+        Our mission is to provide players with a fair and transparent leaderboard, 
+        fostering community and healthy competition.
+      </p>
+    </section>
+
+    <!-- FEATURES / HIGHLIGHTS -->
+    <section class="features">
+      <h2>WHY JOIN?</h2>
+      <div class="feature-grid">
+        <div class="feature reveal-stagger">
+          <h3>Real-Time Scores</h3>
+          <p>Track your progress instantly with accurate leaderboard updates.</p>
+        </div>
+        <div class="feature reveal-stagger">
+          <h3>Active Community</h3>
+          <p>Engage with fellow players, share tips, and form teams.</p>
+        </div>
+        <div class="feature reveal-stagger">
+          <h3>Exciting Rewards</h3>
+          <p>Compete in tournaments and unlock exclusive rewards.</p>
+        </div>
+      </div>
+    </section>
+        <!-- LEADERBOARD SECTION -->
+    <section class="split-section">
+      <div class="split-text">
+        <h2>VIEW LEADERBOARD</h2>
+        <p>Check out the top players and see where you rank among the best.</p>
+        <a href="leaderboard.html" class="btn">GO TO LEADERBOARD</a>
+      </div>
+      <div class="split-image">
+        <img src="leaderboard.png" alt="Leaderboard Preview">
+      </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section class="split-section reverse">
+      <div class="split-text">
+        <h2>MEET THE TEAM</h2>
+        <p>Learn more about the people behind RCL Official and our mission.</p>
+        <a href="team.html" class="btn">MEET THE TEAM</a>
+      </div>
+      <div class="split-image">
+        <img src="team.png" alt="Meet the Team">
+      </div>
+    </section>
+
+
+    <!-- CALL TO ACTION -->
+    <section class="cta">
+      <h2>READY TO COMPETE?</h2>
+      <p>Sign up now and start climbing the leaderboard today.</p>
+      <a href="login.html" class="btn">Join Now</a>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© <span id="year"></span> RCL Official — All Rights Reserved.</p>
+  </footer>
+
+  <script src="homescript.js"></script>
+</body>
+</html>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const loginLink = document.getElementById("login-link");
+  const logoutBtn = document.getElementById("logout-btn");
+
+  // Check logged in user
+  const loggedUser = localStorage.getItem("loggedInUser");
+
+  if (loggedUser) {
+    // Show username in navbar
+    const cleanName = loggedUser.split("#")[0];
+    loginLink.textContent = cleanName;
+    loginLink.href = "#";
+
+    // Show logout button
+    logoutBtn.style.display = "inline-block";
+
+    // Logout handler
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("loggedInUser");
+      // reload page to update navbar
+      window.location.reload();
+    });
+
+  } else {
+    // Not logged in, show default
+    loginLink.textContent = "Log In";
+    loginLink.href = "login.html";
+    logoutBtn.style.display = "none";
+  }
+});
+</script>
